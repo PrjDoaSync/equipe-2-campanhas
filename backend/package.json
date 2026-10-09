@@ -1,0 +1,23 @@
+{
+  "name": "doasync-campanhas-backend",
+  "version": "1.0.0",
+  "description": "API executável inicial do módulo de Campanhas (Equipe 2 - DoaSync) para a Sprint 1 (CAM-T04)",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node src/server.js",
+    "test": "node tests/api.test.js"
+  },
+  "keywords": [
+    "doasync",
+    "campanhas",
+    "sprint-1",
+    "cam-t04"
+  ],
+  "author": "Equipe 2 - Campanhas",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
+}
