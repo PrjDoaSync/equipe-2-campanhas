@@ -1,8 +1,9 @@
 # 🟩 DoaSync — Equipe 2: Campanhas
 
-> **Repositório:** `PrjDoaSync/doa-sync`  
-> **GitHub Project:** [Equipe 2 — Campanhas](https://github.com/orgs/PrjDoaSync/projects/6)  
-> **Organização:** [PrjDoaSync](https://github.com/PrjDoaSync)
+> **Repositório do Módulo:** `PrjDoaSync/equipe-2-campanhas`  
+> **GitHub Project:** [Equipe 2 — Campanhas (Project #6)](https://github.com/orgs/PrjDoaSync/projects/6)  
+> **Organização:** [PrjDoaSync](https://github.com/PrjDoaSync)  
+> **Repositório Central da Organização:** [PrjDoaSync/doa-sync](https://github.com/PrjDoaSync/doa-sync)  
 
 ---
 
@@ -12,14 +13,6 @@ O **DoaSync** é uma plataforma digital desenvolvida para modernizar e facilitar
 
 O projeto busca solucionar dificuldades enfrentadas por instituições sociais na divulgação de campanhas, captação de recursos e acompanhamento das arrecadações.
 
-A plataforma será desenvolvida de maneira modular, integrando diferentes funcionalidades:
-
-- **Gestão de Campanhas:** Criação, edição, publicação, divulgação e encerramento de campanhas de arrecadação.
-- **Gerenciamento de Doações:** Registro e acompanhamento das contribuições realizadas pelos doadores.
-- **Gestão de Entidades:** Cadastro e gerenciamento de instituições assistenciais beneficiadas.
-- **Transparência e Acompanhamento:** Visualização de metas, progresso das arrecadações e resultados obtidos.
-- **Integração entre Módulos:** Comunicação entre campanhas, doações, usuários, entidades e dashboards.
-
 O DoaSync tem como foco inicial apoiar a **APAE** e a **Associação Amor Inclusivo**, promovendo o uso da tecnologia para gerar impacto social positivo.
 
 ---
@@ -28,151 +21,79 @@ O DoaSync tem como foco inicial apoiar a **APAE** e a **Associação Amor Inclus
 
 A **Equipe 2** é responsável pelo **Módulo de Campanhas**, atuando no planejamento, desenvolvimento e integração das funcionalidades relacionadas à criação, divulgação, visualização e gerenciamento das campanhas de arrecadação da plataforma DoaSync.
 
-O objetivo principal é permitir que entidades assistenciais possam organizar suas iniciativas de arrecadação e divulgar suas necessidades, enquanto os doadores conseguem encontrar campanhas e acompanhar suas informações de maneira simples e acessível.
-
 ### Principais Responsabilidades
 
-- **Criação de Campanhas:** Desenvolvimento de formulários e funcionalidades para cadastrar campanhas, incluindo título, descrição, meta de arrecadação, período e entidade responsável.
-
-- **Edição e Gerenciamento:** Implementação das funcionalidades necessárias para atualizar informações e gerenciar campanhas existentes.
-
-- **Publicação e Encerramento:** Controle do ciclo de vida das campanhas, respeitando permissões, períodos de arrecadação e regras de negócio.
-
-- **Listagem de Campanhas:** Desenvolvimento de interfaces para apresentar campanhas disponíveis, permitindo que os usuários conheçam as iniciativas sociais cadastradas.
-
-- **Busca e Filtros:** Implementação de mecanismos para localizar campanhas por informações como nome, entidade e situação.
-
-- **Detalhamento das Campanhas:** Criação de páginas com informações completas, objetivos, imagens e indicadores de progresso.
-
-- **Compartilhamento:** Disponibilização de recursos para facilitar a divulgação das campanhas por meio de links.
-
-- **Integração com APIs:** Comunicação entre frontend e backend para consulta, criação, atualização e persistência das informações.
-
-- **Validação e Qualidade:** Realização de testes funcionais e verificação das regras de negócio, em colaboração com as demais equipes.
+- **Criação e Edição de Campanhas:** Cadastrar e gerenciar campanhas com metas, prazos e entidade vinculada.
+- **Ciclo de Vida:** Controle de estados (*Rascunho*, *Ativa*, *Encerrada*, *Desativada*).
+- **Vitrine e Listagem Pública:** Interfaces acessíveis para apresentação de campanhas com filtros e busca.
+- **Detalhamento:** Páginas completas com histórico, metas, progresso e chamada para doação.
+- **Integração com APIs:** Comunicação padronizada conforme contratos oficiais da organização.
+- **Qualidade e Acessibilidade:** Conformidade com o Design System oficial e WCAG 2.1 AA.
 
 ---
 
-## ⚙️ Funcionalidades do Módulo
+## 🚀 Entregas da Sprint 1 (MVP Inicial)
 
-O módulo de Campanhas será organizado em funcionalidades principais:
+A Sprint 1 foca no alinhamento de regras, contratos de API e entrega do MVP inicial funcional:
 
-| Funcionalidade | Descrição |
-|---|---|
-| Criar campanha | Cadastrar uma nova campanha de arrecadação |
-| Editar campanha | Atualizar informações de campanhas cadastradas |
-| Publicar campanha | Disponibilizar campanhas para visualização pública |
-| Encerrar campanha | Finalizar campanhas e impedir novas contribuições |
-| Visualizar campanhas | Consultar campanhas disponíveis na plataforma |
-| Detalhes da campanha | Exibir objetivos, informações e progresso |
-| Buscar campanhas | Localizar campanhas por termos de pesquisa |
-| Filtrar campanhas | Organizar resultados conforme critérios definidos |
-| Compartilhar campanha | Permitir a divulgação por meio de links |
-
-As funcionalidades serão desenvolvidas progressivamente, conforme as prioridades do projeto e as entregas previstas nas sprints.
+| ID da Task | Título da Atividade | Status | Responsável | Entregável |
+|---|---|---|---|---|
+| **[CAM-T01]** | Validar regras e necessidades das campanhas | Em Validação | `GustavoSilveira1012` | [`docs/relatorio-cam-t01.md`](./docs/relatorio-cam-t01.md) |
+| **[CAM-T02]** | Alinhar modelo de dados e contrato da API | Em Andamento | `GustavoSilveira1012` | Especificação de endpoints e DTOs |
+| **[CAM-T03]** | Revisar e reutilizar protótipos da Equipe 4 | ✅ Concluído | `Trincademes` *(Pedro Vieira)* | [`docs/relatorio-cam-t03.md`](./docs/relatorio-cam-t03.md) |
+| **[CAM-T04]** | Implementar backend inicial de listagem e detalhes | ✅ Concluído | `Trincademes` *(Pedro Vieira)* | Módulo [`backend/`](./backend/) + Testes de Regressão |
+| **[CAM-T05]** | Implementar frontend de listagem e detalhes | ✅ Concluído | `Trincademes` *(Pedro Vieira)* | Módulo [`frontend/`](./frontend/) (React + Tailwind) |
+| **[CAM-T06]** | Validar demonstração da Sprint 1 | Previsto | Toda a Equipe | Roteiro de testes integrados |
 
 ---
 
-## 🏗️ Estrutura Funcional
+## 💻 Como Executar o Projeto Localmente
 
-```text
-Módulo de Campanhas
-│
-├── Gerenciamento
-│   ├── Criar campanha
-│   ├── Editar campanha
-│   ├── Publicar campanha
-│   └── Encerrar campanha
-│
-├── Visualização
-│   ├── Listagem de campanhas
-│   ├── Detalhes da campanha
-│   └── Progresso da arrecadação
-│
-├── Descoberta
-│   ├── Buscar campanhas
-│   ├── Filtrar campanhas
-│   └── Compartilhar campanhas
-│
-└── Integrações
-    ├── API de campanhas
-    ├── Banco de dados
-    ├── Autenticação e permissões
-    ├── Módulo de doações
-    └── Gestão e Dashboard
+O módulo de Campanhas é desacoplado e pode ser executado em conjunto ou de forma independente:
+
+### 1. Executando o Backend (API de Campanhas)
+```bash
+cd backend
+npm install
+npm start
 ```
+* **URL Base da API:** `http://localhost:8080/api/v1`
+* **Testes Automatizados:** `npm test`
+* **Healthcheck:** `GET http://localhost:8080/api/v1/health`
+* **Listagem:** `GET http://localhost:8080/api/v1/campanhas`
+* **Detalhes:** `GET http://localhost:8080/api/v1/campanhas/{id}`
 
----
+### 2. Executando o Frontend (Aplicação Web)
+Em um novo terminal:
+```bash
+cd frontend
+npm install
+npm run dev
+```
+* Acesse no navegador: 👉 `http://localhost:5173`
 
-## 🔗 Integração com Outras Equipes
-
-O módulo de Campanhas possui dependências com os demais módulos do DoaSync.
-
-| Equipe / Módulo | Integração |
-|---|---|
-| Produto, Usuários e Entidades | Requisitos, autenticação e permissões |
-| Doações | Vinculação das contribuições às campanhas |
-| Gestão e Dashboard | Indicadores, relatórios e acompanhamento das arrecadações |
-| Banco de Dados e APIs | Estrutura de dados, persistência e endpoints |
-| Qualidade de Software | Testes, validações e acompanhamento de erros |
-
-O alinhamento entre as equipes será essencial para garantir a consistência das informações e o funcionamento integrado da plataforma.
-
----
-
-## 📅 Planejamento e Sprints
-
-O desenvolvimento será realizado de forma incremental, utilizando **GitHub Projects** para organização e acompanhamento das atividades.
-
-### Sprint 1 — Planejamento e Desenvolvimento Inicial
-
-Principais atividades previstas:
-
-- Levantamento e validação das regras de negócio.
-- Alinhamento do modelo de dados e contratos das APIs.
-- Revisão dos protótipos existentes.
-- Desenvolvimento inicial do frontend.
-- Implementação das funcionalidades prioritárias.
-- Integração inicial com os serviços disponíveis.
-- Testes e validações das entregas.
-
-### Próximas Sprints
-
-As próximas etapas contemplarão a evolução do gerenciamento de campanhas, aprimoramento das interfaces, integração completa entre módulos, correções e validação final das funcionalidades.
-
-O planejamento poderá ser atualizado conforme as necessidades identificadas durante o desenvolvimento.
+> **Nota de Resiliência:** O frontend possui detecção automática de status da API. Caso o backend não esteja ativo no momento, a aplicação ativa o **Modo Demonstração Offline (Fallback)** com dados simulados da APAE e Amor Inclusivo, garantindo total navegabilidade e validação da interface.
 
 ---
 
 ## 👥 Integrantes da Equipe 2
 
-| Integrante | Atuação |
-|---|---|
-| [GustavoSilveira1012](https://github.com/GustavoSilveira1012) | Front-end / Planejamento e organização das atividades |
-| Demais integrantes | A preencher conforme a composição da equipe |
+| Integrante | GitHub | Atuação no Módulo |
+|---|---|---|
+| **Pedro Vieira** | [@Trincademes](https://github.com/Trincademes) | Front-end & Back-end / Protótipos (CAM-T03, CAM-T04, CAM-T05) |
+| **Gustavo Silveira** | [@GustavoSilveira1012](https://github.com/GustavoSilveira1012) | Front-end / Planejamento e Requisitos (CAM-T01, CAM-T02) |
+| Demais integrantes | — | A preencher conforme alocação nas próximas sprints |
 
 ---
 
-## 📂 Documentação e Organização
+## 📂 Documentação e Referências
 
-As atividades da Equipe 2 são acompanhadas por meio do GitHub Projects, com registro de tarefas, requisitos, critérios de aceite e entregas.
-
-### Referências
-
-- [Repositório oficial DoaSync](https://github.com/PrjDoaSync/doa-sync)
+- [Repositório Oficial DoaSync](https://github.com/PrjDoaSync/doa-sync)
 - [GitHub Project — Equipe 2](https://github.com/orgs/PrjDoaSync/projects/6)
-- [Documentação de Requisitos](https://github.com/PrjDoaSync/doa-sync/blob/main/docs/requisitos.md)
-- [Contrato das APIs](https://github.com/PrjDoaSync/doa-sync/blob/main/docs/rotas-api.md)
-- [CAM-T01 — Validação das Regras de Negócio](https://github.com/PrjDoaSync/doa-sync/issues/152)
-- [CAM-T02 — Modelo de Dados e APIs](https://github.com/PrjDoaSync/doa-sync/issues/153)
-- [CAM-T03 — Protótipos de Campanhas](https://github.com/PrjDoaSync/doa-sync/issues/154)
-
----
-
-## 🌎 Impacto Social
-
-O desenvolvimento do módulo de Campanhas busca facilitar a divulgação de iniciativas sociais, ampliar a visibilidade das necessidades das entidades assistenciais e tornar o processo de contribuição mais acessível aos doadores.
-
-Por meio da tecnologia, a Equipe 2 pretende contribuir para uma plataforma que auxilie instituições na organização de suas arrecadações e fortaleça a conexão entre a comunidade e os projetos sociais.
+- [Contrato Oficial de Rotas da API](https://github.com/PrjDoaSync/doa-sync/blob/main/docs/rotas-api.md)
+- [Design System e Guia Visual](https://github.com/PrjDoaSync/doa-sync/blob/main/docs/DESIGN-SYSTEM.md)
+- [Relatório de Validação de Regras (CAM-T01)](./docs/relatorio-cam-t01.md)
+- [Relatório de Revisão de Protótipos (CAM-T03)](./docs/relatorio-cam-t03.md)
 
 ---
 
