@@ -50,6 +50,20 @@ export function App() {
     carregarCampanhas();
   }, [carregarCampanhas]);
 
+  // Suporte a Deep-linking por URL (CAM-T03 / CAM-T05 / CAM-T12)
+  useEffect(() => {
+    if (campanhas.length > 0 && !campanhaSelecionada) {
+      const params = new URLSearchParams(window.location.search);
+      const idUrl = params.get("campanhaId");
+      if (idUrl) {
+        const encontrada = campanhas.find((c) => c.id === idUrl);
+        if (encontrada) {
+          setCampanhaSelecionada(encontrada);
+        }
+      }
+    }
+  }, [campanhas, campanhaSelecionada]);
+
   const handleLimparFiltros = () => {
     setBusca("");
     setStatusFiltro("TODAS");

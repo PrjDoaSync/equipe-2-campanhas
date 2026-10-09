@@ -8,7 +8,7 @@ const BASE_URL = `http://localhost:${PORT}/api/v1`;
 
 function request(path, options = {}) {
   return new Promise((resolve, reject) => {
-    const url = `${BASE_URL}${path}`;
+    const url = path.startsWith("http") ? path : `${BASE_URL}${path}`;
     http.get(url, options, (res) => {
       let data = "";
       res.on("data", (chunk) => (data += chunk));
@@ -85,13 +85,20 @@ async function runTests() {
     console.log("   ✅ Filtro de busca OK!");
 
     // Teste 6: Filtro por status
-    console.log("  [6/6] Testando GET /campanhas?status=ENCERRADA...");
+    console.log("  [6/7] Testando GET /campanhas?status=ENCERRADA...");
     const resStatus = await request("/campanhas?status=ENCERRADA");
     assert(resStatus.status === 200, `Esperado 200, obtido ${resStatus.status}`);
     assert(resStatus.body.data.every((c) => c.status === "ENCERRADA"), "Todas devem ter status ENCERRADA");
     console.log("   ✅ Filtro por status OK!");
 
-    console.log("\n🎉 TODOS OS 6 TESTES DE REGRESSÃO PASSARAM COM SUCESSO!\n");
+    // Teste 7: Rota direta sem prefixo /api/v1 (GET /campanhas)
+    console.log("  [7/7] Testando rota raiz direta GET http://localhost:" + PORT + "/campanhas...");
+    const resRoot = await request(`http://localhost:${PORT}/campanhas`);
+    assert(resRoot.status === 200, `Esperado 200 na rota raiz, obtido ${resRoot.status}`);
+    assert(Array.isArray(resRoot.body.data) && resRoot.body.data.length >= 3, "Rota raiz deve retornar campanhas públicas");
+    console.log("   ✅ Compatibilidade com rota raiz /campanhas OK!");
+
+    console.log("\n🎉 TODOS OS 7 TESTES DE REGRESSÃO PASSARAM COM SUCESSO!\n");
   } finally {
     server.close();
   }

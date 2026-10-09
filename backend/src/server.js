@@ -23,8 +23,9 @@ app.use((req, res, next) => {
   next();
 });
 
-// Prefixo padrão oficial: /api/v1
+// Prefixo padrão oficial: /api/v1 e suporte direto à raiz /campanhas conforme CAM-T04
 app.use("/api/v1", campanhaRoutes);
+app.use("/", campanhaRoutes);
 
 // Rota raiz de boas-vindas / metadados do serviço
 app.get("/", (req, res) => {
